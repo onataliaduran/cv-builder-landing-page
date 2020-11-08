@@ -1,0 +1,50 @@
+.button {
+    background: $brand-gradient;
+    color: #ffffff;
+    font-weight: map-get($font-weights, semi-bold);
+    padding: 1.2em 2.5em;
+    border: none;
+    border-radius: 6px;
+    outline: none;
+    cursor: pointer;
+} 
+
+.hero__button {
+    @extend .button;
+    font-size: 1em;
+    width: 55%;
+    margin: 1em 0;
+    transition-duration: 500ms;
+    transition-property: transform;
+
+    &:hover {
+        transform: scale(1.1);
+    }
+}
+
+.card__button {
+    @extend .button;
+}
+
+.submitBtn {
+    @extend .button;
+}
+
+@media screen and (max-width: 1120px) {
+    .hero__button {
+        font-size: .9em;
+        padding: 1.2em 1.5em;
+    }
+}
+
+@media screen and (max-width: 570px) {
+    .hero__button {
+        width: 70%;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    .hero__button {
+        width: 90%;
+    }
+}

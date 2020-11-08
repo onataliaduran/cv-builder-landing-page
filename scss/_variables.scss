@@ -1,0 +1,42 @@
+// =================== FONTS
+$font-stack: 'Poppins', sans-serif;
+$font-weights: (
+    "regular": 400,
+    "medium": 500,
+    "semi-bold": 600,
+    "bold": 700,
+    "extra-bold": 800,
+    "black-bold": 900
+);
+
+// =================== BRAND COLORS
+$primary-color: #39065a;
+$secondary-color: #9a0f98;
+
+
+// =================== GRADIENTS 
+$brand-gradient: linear-gradient(103deg, rgba(57,6,90,1) 0%, rgba(154,15,152,1) 62%);
+
+
+// =================== GRAYSCALE
+$dark-gray:  rgb(145, 145, 145);
+$medium-gray: rgb(194, 194, 194);
+$light-gray:  rgb(250, 250, 250);
+
+
+// =================== SHADOWS 
+$normal-shadow: 0 2.7px 3.3px rgba(0, 0, 0, 0.041),
+                0 7.5px 8.5px rgba(0, 0, 0, 0.054),
+                0 18.1px 19.1px rgba(0, 0, 0, 0.063),
+                0 60px 63px rgba(0, 0, 0, 0.16);
+$lighter-shadow: 0 1.7px 3.6px rgba(0, 0, 0, 0.02),
+                0 0.8px 10px rgba(0, 0, 0, 0.031),
+                0 3.1px 24.1px rgba(0, 0, 0, 0.043),
+                0 100px 80px rgba(0, 0, 0, 0.07);
+$darker-shadow: 0 1.2px 2.9px rgba(0, 0, 0, 0.018),
+                0 2.7px 6.6px rgba(0, 0, 0, 0.026),
+                0 4.9px 11.9px rgba(0, 0, 0, 0.032),
+                0 8.2px 19.8px rgba(0, 0, 0, 0.038),
+                0 13.5px 32.5px rgba(0, 0, 0, 0.044),
+                0 23.6px 56.9px rgba(0, 0, 0, 0.052),
+                0 51px 123px rgba(0, 0, 0, 0.07);          

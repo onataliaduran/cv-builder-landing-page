@@ -1,0 +1,206 @@
+.menu {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 1rem;
+    padding: 2em 3em;
+    position: sticky;
+    top: 0;
+    background-color: #ffffff;
+    z-index: 2;
+}
+
+@supports (-webkit-backdrop-filter: none) or (backdrop-filter: none) {
+    .menu {
+      -webkit-backdrop-filter: blur(15px);
+      backdrop-filter: blur(15px);
+      background-color: rgba(255, 255, 255, 0.5);  
+    }
+}
+
+.menu__logo {
+    color: $primary-color;
+    font-weight: map-get($font-weights, black-bold);
+    font-size: 2em;
+    text-decoration: none;
+}
+
+.menu__togglerBtn   {
+    display: none;
+}
+
+.menu__togglerBox {
+    display: none;
+    width: 3rem;
+    height: 3rem;
+    border-radius: 5px;
+    box-shadow: $darker-shadow;
+    cursor: pointer;
+}
+
+.menu__navbarLinks {
+    list-style-type: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 40vw;
+
+    li {
+        a {
+            color: #000000;
+            text-decoration: none;
+            font-weight: map-get($font-weights, medium);
+            font-size: 1rem; 
+        }
+        a:hover {
+            border-bottom: 3px solid $secondary-color;
+        }
+
+        &:last-child {
+            a {
+                color: $secondary-color;
+                padding: .4em 1.7em;
+                border: 2px solid $secondary-color;
+                border-radius: 5px;
+
+                &:hover {
+                    @include set-color($secondary-color, #ffffff);
+                    padding: .4em 1.7em;
+                    border-radius: 5px;
+                }
+            }
+        }
+    }
+
+}
+
+
+@media screen and (max-width: 995px) {
+    .menu__toggler {
+        position: relative;
+    }
+
+    .menu__togglerBox {
+        display: block;
+        @include flex-center;
+        position: relative;
+    }
+
+    .menu__togglerBars {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: flex-end;
+        height: 25%;
+    }
+
+    .menu__navbar {
+        display: none;
+    }
+
+    .menu__togglerBarTop {
+        background-color: $primary-color;
+        display: inline-block;
+        width: 1rem;
+        height: 2px;
+        border-radius: 20px;
+        transition: all .2s ease-out;
+    }
+
+    .menu__togglerBarMedium {
+        background-color: $primary-color;
+        display: inline-block;
+        width: 1rem;
+        height: 2px;
+        border-radius: 20px;
+        transition: background .2s ease-out;
+    }
+
+    .menu__togglerBarBottom {
+        background-color: $primary-color;
+        display: inline-block;
+        width: .8rem;
+        height: 2px;
+        border-radius: 20px;
+        transition: all .2s ease-out;
+    }
+
+    .menu__togglerBtn:checked ~ .menu__navbar {
+        display: block;
+        position: absolute;
+        top: 69px;
+        right: 0px;
+        z-index: 3;
+        width: 35vmax;
+        height: 320px;
+        background-color: #ffffff;
+        border-radius: 9px;
+        box-shadow: $darker-shadow;
+        animation-name: menuBox;
+        animation-duration: .4s;
+
+        .menu__navbarLinks {
+            flex-direction: column;
+            width: 100%;
+            height: 100%;
+            padding: 2rem;
+            opacity: 0;
+            animation-name: menuBoxLinks;
+            animation-duration: .1s;
+            animation-delay: .4s;
+            animation-fill-mode: forwards;
+        }
+    }
+
+    // @supports (-webkit-backdrop-filter: none) or (backdrop-filter: none) {
+    //     .menu__togglerBtn:checked ~ .menu__navbar {
+    //       -webkit-backdrop-filter: blur(10px);
+    //       backdrop-filter: blur(10px);
+    //       background-color: rgba(255, 255, 255, 0.5);  
+    //     }
+    // }
+
+    @keyframes menuBox {
+        0% {
+            width: 0;
+            height: 0;
+            border-radius: 50%;
+        }
+        100% {
+            width: 226px;
+            height: 249px;
+            border-radius: 5px;
+        }
+    }
+
+    @keyframes menuBoxLinks {
+        0% {
+            opacity: 0;
+        }
+        100% {
+            opacity: 1;
+        }
+    }
+
+    .menu__togglerBtn:checked ~ .menu__togglerBox .menu__togglerBarMedium {
+      background: transparent;  
+    }
+
+    .menu__togglerBtn:checked ~ .menu__togglerBox .menu__togglerBarTop {
+        transform: rotate(-45deg);
+        width: 1rem;
+        position: absolute;
+        top: 1.4rem;
+        right: 1rem;
+    }
+
+    .menu__togglerBtn:checked ~ .menu__togglerBox .menu__togglerBarBottom {
+        transform: rotate(45deg);
+        width: 1rem;
+        position: absolute;
+        top: 1.4rem;
+        right: 1rem;
+    }
+
+
+}

@@ -1,0 +1,257 @@
+.hero {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    font-size: 1rem; 
+
+    &__leftGroup {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding: 1.5em 3em;
+    }
+
+    &__rightGroup {
+        @include flex-center;
+    }
+
+    &__headline {
+        font-weight:  map-get($font-weights, black-bold);
+        font-size: 3.5em;
+        margin: .2em 0;
+    }
+
+    &__tagline {
+        font-weight: map-get($font-weights, medium);
+        font-size: 1.3em;
+        width: 80%;
+        margin: 1em 0;
+    }
+
+
+    // =================== CV DRAW
+
+    &__cvDraw {
+        position: relative;
+        display: flex;
+        justify-content: center;
+        font-size: 1rem;
+        width: 80%;
+    }
+
+    &__cvBody {
+        position: relative;
+        width: 18em;
+        height: 0;
+        padding: 1em .2em;
+        border-radius: 5px;
+        box-shadow: $normal-shadow;
+        animation-name: cvBody;
+        animation-duration: .9s;
+        animation-fill-mode: forwards;
+    }
+
+    &__cvHeader {
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+    }
+
+    &__cvHeaderPic {
+        background-color: $medium-gray; 
+        border-radius: 50%;
+        width: 4em;
+        height: 4em;
+    }
+
+    &__cvHeaderLine {
+        background-color: $medium-gray;
+        width: 9em;
+        height: .6em;
+        border-radius: 10px;
+        margin: .4em;
+        animation-name: line;
+        animation-duration: 1s;
+    }
+
+    &__cvContent1 {
+        position: absolute;
+        top: 7em;
+        left: 0;
+        width: 0px;
+        height: 7em;
+        border-radius: 5px;
+        box-shadow: $darker-shadow;
+        animation-name: content1;
+        animation-duration: 2s;
+        animation-delay: .5s;
+        animation-fill-mode: forwards;
+    }
+
+    &__cvContent2 { 
+        position: absolute;
+        top: 16em;
+        right: 0;
+        width: 0px;
+        height: 7em;
+        border-radius: 5px;
+        box-shadow: $darker-shadow;
+        animation-name: content2;
+        animation-duration: 2s;
+        animation-delay: .5s;
+        animation-fill-mode: forwards;
+    }
+
+    &__cvCont1Decorator {
+        position: relative;
+    }
+
+    &__cvCont1DecoratorCircule {
+        background-color: $secondary-color;
+        color: white;
+        position: absolute;
+        top: -13px;
+        left: 11px;
+        width: 0;
+        height: 0;
+        border-radius: 50%;
+        box-shadow: $normal-shadow;
+        @include flex-center;
+        animation-name: cont1Decorator;
+        animation-duration: .2s;
+        animation-delay: 2s;
+        animation-fill-mode: forwards;
+    }
+
+    &__cvCont2Decorator {
+        position: relative;
+    }
+
+    &__cvCont2DecoratorCircule {
+        background-color: $secondary-color;
+        color: white;
+        position: absolute;
+        top: -13px;
+        right: 11px;
+        width: 0;
+        height: 0;
+        border-radius: 50%;
+        box-shadow: $normal-shadow;
+        @include flex-center;
+        animation-name: cont2Decorator;
+        animation-duration: .2s;
+        animation-delay: 2s;
+        animation-fill-mode: forwards;
+    }
+
+
+}
+
+@keyframes cvBody {
+    0% {
+        height: 0;
+    }
+    100% {
+        height: 25em;
+    }
+}
+
+@keyframes line {
+    0% {
+        width: 0px;
+    }
+    100% {
+        width: 9em;
+    }
+}
+
+@keyframes content1 {
+    0% {
+        width: 0px;
+    }
+    100% {
+        width: 17em;
+    }
+}
+
+@keyframes content2 {
+    0% {
+        width: 0px;
+    }
+    100% {
+        width: 17em;
+    }
+}
+
+@keyframes cont1Decorator {
+    0% {
+        width: 0px;
+    }
+    100% {
+        width: 25px;
+        height: 25px;
+    }
+}
+
+@keyframes cont2Decorator {
+    0% {
+        width: 0px;
+    }
+    100% {
+        width: 25px;
+        height: 25px;
+    }
+}
+
+@media screen and (max-width: 995px) {
+    .hero__headline {
+        font-size: 3em;
+    }
+}
+
+@media screen and (max-width: 868px) {
+    .hero {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        grid-template-areas: "first"
+                            "second";
+
+        &__rightGroup {
+            grid-area: first;
+        }
+
+        &__leftGroup {
+            grid-area: second;
+            align-items: center;
+            text-align: center;
+            margin-top: 3rem;
+        }
+
+        &__cvDraw {
+            width: 60%;
+        }
+    }
+}
+
+@media screen and (max-width: 570px) {
+    .hero {
+        &__headline {
+            font-size: 2.5em;
+        }
+
+        &__cvDraw {
+            font-size: 12px;
+        }
+    }
+}
+
+@media screen and (max-width: 400px) {
+    .hero {
+        &__headline {
+            font-size: 2em;
+        }
+
+        &__cvDraw {
+            font-size: 10px;
+        }
+    }
+}
