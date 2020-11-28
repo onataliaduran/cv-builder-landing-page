@@ -1,0 +1,26 @@
+.subpage__registration {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.signInForm {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-rows: repeat(3, auto);
+    grid-gap: 1rem;
+    width: 40vw;
+}
+
+.signUpTxt {
+    font-weight: map-get($font-weights, semi-bold);
+    text-align: center;
+    margin: 1rem 0;
+
+    span {
+        color: $secondary-color;
+        text-decoration: underline;
+    }
+
+}

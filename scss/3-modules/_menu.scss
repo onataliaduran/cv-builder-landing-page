@@ -152,14 +152,6 @@
         }
     }
 
-    // @supports (-webkit-backdrop-filter: none) or (backdrop-filter: none) {
-    //     .menu__togglerBtn:checked ~ .menu__navbar {
-    //       -webkit-backdrop-filter: blur(10px);
-    //       backdrop-filter: blur(10px);
-    //       background-color: rgba(255, 255, 255, 0.5);  
-    //     }
-    // }
-
     @keyframes menuBox {
         0% {
             width: 0;

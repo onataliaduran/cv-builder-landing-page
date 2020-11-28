@@ -1,0 +1,71 @@
+.pricing {
+    // @include section-container;
+
+    // &__header {
+    //     @include set-header-container($page-header: false);
+    // }
+
+    // &__title {
+    //     @include set-title($page-title: false);
+    //     @include medium-phone-screens {
+    //         font-size: 2.5rem;
+    //     }
+    //     @include small-phone-screens {
+    //         font-size: 2rem;
+    //     }
+    // }
+
+    // &__headerLine {
+    //     @include set-line;
+    // }
+
+    // &__body {
+    //     display: grid;
+    //     grid-template-columns: repeat(2, 350px);
+    //     grid-gap: 2rem;
+    //     justify-content: center;
+    //     padding: 1rem 0;
+
+    //     @include large-screens {
+    //         display: grid;
+    //         grid-template-columns: repeat(1, 42vmax);
+    //         grid-gap: 2rem;
+    //         justify-content: center;
+    //         padding: 1rem 0;
+    //     }
+    // }
+}
+
+.section__pricing {
+    display: grid;
+    grid-template-columns: repeat(2, 350px);
+    grid-gap: 2rem;
+    justify-content: center;
+    padding: 1rem 0;
+
+    @include large-screens {
+        display: grid;
+        grid-template-columns: repeat(1, 42vmax);
+        grid-gap: 2rem;
+        justify-content: center;
+        padding: 1rem 0;
+    }
+}
+
+.subpage__pricing {
+    display: grid;
+    grid-template-columns: repeat(2, 350px);
+    grid-gap: 2rem;
+    justify-content: center;
+    padding: 1rem 0;
+
+    @include large-screens {
+        display: grid;
+        grid-template-columns: repeat(1, 42vmax);
+        grid-gap: 2rem;
+        justify-content: center;
+        padding: 1rem 0;
+    }
+}
+
+

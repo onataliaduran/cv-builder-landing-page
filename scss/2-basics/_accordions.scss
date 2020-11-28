@@ -1,0 +1,42 @@
+.accordion {
+    background-color: #fff;
+    width: 70%;
+    padding: 1em 2em;
+    border-radius: 5px;
+    border-left: 5px solid $primary-color;
+    margin-bottom: 1.5rem;
+    box-shadow: $lighter-shadow;
+
+    &__toggler {
+        display: none;
+    }
+
+    &__title {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        font-weight: 600;
+        cursor: pointer;
+    }
+    
+    &__icon {
+        width: 17px;
+        height: 17px;
+        transition: transform .4s ease;
+    }
+    
+    &__body {
+        display: none;
+        padding-top: 1rem; 
+        color: grey;
+    }
+
+    &__toggler:checked ~ .accordion__title .accordion__icon {
+        transform: rotate(180deg);
+    }
+    
+    &__toggler:checked ~ .accordion__body {
+        display: block;
+    }
+
+}

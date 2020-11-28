@@ -24,6 +24,19 @@
 
 .card__button {
     @extend .button;
+    width: 70%;
+}
+
+.card__button--light {
+    background: #fff;
+    color: $primary-color;
+    font-weight: map-get($font-weights, semi-bold);
+    padding: 1.2em 2.5em;
+    border: none;
+    border-radius: 6px;
+    outline: none;
+    cursor: pointer;
+    width: 70%;
 }
 
 .submitBtn {

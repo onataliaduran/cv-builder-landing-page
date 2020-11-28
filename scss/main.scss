@@ -1,13 +1,35 @@
-@import 'variables';
-@import 'config';
-@import 'scrollbar';
+// 1 - HELPERS
+@import '1-helpers/variables';
+@import '1-helpers/mixins';
 
-@import 'menu';
-@import 'hero';
+// 2 - BASICS
+@import '2-basics/config';
+@import '2-basics/cards';
+@import '2-basics/accordions';
+@import '2-basics/buttons';
+@import '2-basics/inputs';
 
-@import 'utilities';
-@import 'cards';
-@import 'forms';
-@import 'buttons';
+// 3 - MODULES
+@import '3-modules/menu';
+@import '3-modules/sectionContainer';
+@import '3-modules/subpageContainer';
+@import '3-modules/footer';
 
-@import 'footer';
+// 4 - LAYOUTS
+@import '4-layouts/hero';
+@import '4-layouts/steps';
+@import '4-layouts/creators';
+@import '4-layouts/pricing';
+@import '4-layouts/contact';
+@import '4-layouts/products';
+@import '4-layouts/faq';
+@import '4-layouts/registration';
+
+
+
+
+
+
+
+
+

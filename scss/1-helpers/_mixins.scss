@@ -1,0 +1,70 @@
+@mixin set-color($background, $font) {
+    background-color: $background;
+    color: $font;
+}
+
+@mixin  flex-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@mixin section-container {
+    width: 90vw;
+    margin: 5rem auto;
+}
+
+@mixin set-header-container($page-header: true) {
+    @if $page-header {
+        text-align: center;
+        margin: 3rem;
+    } @else {
+        margin: 3em 0;
+    }
+}
+
+@mixin set-title($page-title: true) {
+    @if $page-title {
+        font-weight: map-get($font-weights, black-bold);
+        font-size: 3rem;
+        margin: .2em 0;
+    } @else {
+        font-weight: map-get($font-weights, bold);
+        font-size: 3rem;
+        text-align: center;
+    }
+}
+
+@mixin set-subtitle {
+    font-weight: map-get($font-weights, semi-bold);
+    font-size: 1.5em;
+    text-align: center;
+    margin: 0;
+}
+
+@mixin set-line {
+    background: $brand-gradient;
+    width: 5rem;
+    height: 5px;
+    border-radius: 5px;
+    margin: 0 auto;
+    margin-top: 15px;
+}
+
+@mixin large-screens {
+    @media (max-width: 868px) {
+        @content;
+    }
+}
+
+@mixin medium-phone-screens {
+    @media (max-width: 570px) {
+        @content;
+    }
+}
+
+@mixin small-phone-screens {
+    @media (max-width: 400px) {
+        @content;
+    }
+}

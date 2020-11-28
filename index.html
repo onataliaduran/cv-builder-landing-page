@@ -3,7 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>cviiing</title>
+    <!-- SEO Meta Tags -->
+    <meta name="keywords" description="CV, resume, CV builder, CV maker, Resume builer, Resume maker, Curriculum vitae, Job seeker">
+    <meta name="description" content="Free online CV builder that allows you to create, edit and share your CVs and Cover Letters easily. Create your first CV and start applying for jobs today!">
+    <title>cviiing - Free CV builder</title>
     <script src="https://kit.fontawesome.com/ee032daa0e.js" crossorigin="anonymous"></script>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/main.css">
@@ -17,7 +20,6 @@
             <label class="menu__togglerBox" for="menuBtn">
                 <div class="menu__togglerBars">
                     <span class="menu__togglerBarTop"></span>
-                    <!-- <span class="menu__togglerBarMedium"></span> -->
                     <span class="menu__togglerBarBottom"></span>
                 </div>
             </label>
@@ -32,7 +34,6 @@
                 </ul>
             </nav>
         </div>
-
     </header>
 
     <main>
@@ -68,16 +69,16 @@
             </div>
         </section>
         <!-- STEPS SECTION -->
-        <section id="steps" class="pageSection">
-            <header class="sectionHeader">
-                <h2 class="sectionTitle">How it works</h2>
-                <div class="sectionHeader__line"></div>
+        <section id="stepsSection" class="section">
+            <header class="section__header">
+                <h2 class="section__title">How it works</h2>
+                <div class="section__headerLine"></div>
             </header>
-            <div class="stepsWrapper">
+            <div class="section__steps">
                 <div class="card">
                     <div class="card__iconContainer">
                         <img class="card__icon" src="assets/icons/edit.png" alt="pencil with paper">
-                        <img class="card__iconBackgr" src="assets/svg/shape1.svg" alt="purple irregular shape">
+                        <div class="card__iconShape"></div>
                     </div>
                     <h3 class="card__title">Create & Edit</h3>
                     <p class="card__txt">Bacon ipsum dolor amet landjaeger bacon flank burgdoggen fatback doner meatloaf kielbasa.</p>
@@ -85,7 +86,7 @@
                 <div class="card">
                     <div class="card__iconContainer">
                         <img class="card__icon" src="assets/icons/template.png" alt="template">
-                        <img class="card__iconBackgr" src="assets/svg/shape2.svg" alt="purple irregular shape">
+                        <div class="card__iconShape3"></div>
                     </div>
                     <h3 class="card__title">Select a Template</h3>
                     <p class="card__txt">Bacon ipsum dolor amet landjaeger bacon flank burgdoggen fatback doner meatloaf kielbasa.</p>
@@ -93,7 +94,7 @@
                 <div class="card">
                     <div class="card__iconContainer">
                         <img class="card__icon" src="assets/icons/rocket.png" alt="rocket">
-                        <img class="card__iconBackgr" src="assets/svg/shape3.svg" alt="purple irregular shape">
+                        <div class="card__iconShape2"></div>
                     </div>
                     <h3 class="card__title">Start Sharing</h3>
                     <p class="card__txt">Bacon ipsum dolor amet landjaeger bacon flank burgdoggen fatback doner meatloaf kielbasa.</p>
@@ -101,60 +102,68 @@
             </div>
         </section>
         <!-- CREATORS SECTION -->
-        <section id="creators" class="pageSection">
-            <div class="creatorsWrapper">
-                <div class="creators__leftGroup">
-                    <img class="creatorsPic" src="assets/img/creators.png" alt="Ilustration Of Creators">
+        <section id="creatorsSection" class="section">
+            <div class="section__creators">
+                <div class="section__creatorsLeftGroup">
+                    <img class="section__creatorsPic" src="assets/img/creators.png" alt="Ilustration Of Creators">
                 </div>
-                <div class="creators__rightGroup">
-                    <header class="creators__header">
-                        <h2 class="sectionTitle">Who we are</h2>
-                        <div class="sectionHeader__line"></div>
+                <div class="section__creatorsRightGroup">
+                    <header class="section__header">
+                        <h2 class="section__title">Who we are</h2>
+                        <div class="section__headerLine"></div>
                     </header>
-                    <p class="creators__txt">Bacon ipsum dolor amet ham hock filet mignon alcatra venison pork. Burgdoggen sausage porchetta strip steak fatback cow salami jerky chuck jowl prosciutto turkey pig kielbasa chicken.</p>
+                    <p class="section__creatorsTxt">Bacon ipsum dolor amet ham hock filet mignon alcatra venison pork. Burgdoggen sausage porchetta strip steak fatback cow salami jerky chuck jowl prosciutto turkey pig kielbasa chicken.</p>
                 </div>
             </div>
         </section>
         <!-- PRICING SECTION -->
-        <section id="pricing" class="pageSection">
-            <header class="sectionHeader">
-                <h2 class="sectionTitle">Get starting today!</h2>
-                <div class="sectionHeader__line"></div>
+        <section id="pricingSection" class="section">
+            <header class="section__header">
+                <h2 class="section__title">Get starting today!</h2>
+                <div class="section__headerLine"></div>
             </header>
-            <div class="pricingWrapper">
+            <div class="section__pricing">
                 <div class="card card--withShadow">
-                    <img src="" alt="Freemium plan">
+                    <p class="card__price">$0,00</p>
                     <h3 class="card__title">FREEMIUM</h3>
                     <div class="card__body">
-                        <p class="card__txt">$0,00</p>
-                        <p class="card__txt">Bacon ipsum dolor amet</p>
+                        <ul class="card__list">
+                            <li class="card__listItem"> <i class="fas fa-check-circle"></i> 10 GB Space </li>
+                            <li class="card__listItem"> <i class="fas fa-check-circle"></i> 3 Domain Names </li>
+                            <li class="card__listItem"> <i class="fas fa-check-circle"></i> 20 Email Address </li>
+                            <li class="card__listItem"> <i class="fas fa-check-circle"></i> Live Support </li>
+                        </ul>
                     </div>
                     <button class="card__button" type="button">Button</button>
                 </div>
-                <div class="card card--withShadow">
-                    <img src="" alt="You rock plan">
+                <div class="card card--dark card--withShadow">
+                    <p class="card__price">$0,00</p>
                     <h3 class="card__title">YOU ROCK!</h3>
                     <div class="card__body">
-                        <p class="card__txt">$0,00</p>
-                        <p class="card__txt">Bacon ipsum dolor amet</p>
+                        <ul class="card__list">
+                            <li class="card__listItem--light"> <i class="fas fa-check-circle"></i> 10 GB Space </li>
+                            <li class="card__listItem--light"> <i class="fas fa-check-circle"></i> 3 Domain Names </li>
+                            <li class="card__listItem--light"> <i class="fas fa-check-circle"></i> 20 Email Address </li>
+                            <li class="card__listItem--light"> <i class="fas fa-check-circle"></i> Live Support </li>
+                        </ul>
                     </div>
-                    <button class="card__button" type="button">Button</button>
+                    <button class="card__button--light" type="button">Button</button>
                 </div>
             </div>
         </section>
         <!-- CONTACT US SECTION -->
-        <section id="contactUs" class="pageSection">
-            <header class="sectionHeader">
-                <h2 class="sectionTitle">Want to tell us something?</h2>
-                <p class="sectionSubtitle">Go ahead!</p>
-                <div class="sectionHeader__line"></div>
+        <section id="contactSection" class="section">
+            <header class="section__header">
+                <h2 class="section__title">Want to tell us something?</h2>
+                <p class="section__subtitle">Go ahead!</p>
+                <div class="section__headerLine"></div>
             </header>
-            <div class="formContainer">
-                <form class="formWrapper" action="#" method="POST">
-                    <input class="input" type="text" id="name" name="name" value="" placeholder="John">
-                    <input class="input" type="email" id="email" name="email" value="" placeholder="johndoe@gmail.com">
-                    <textarea class="input txtArea" id="comment" name="comment" value="" placeholder="Your platform should..."></textarea>
-                    <button class="submitBtn" type="submit">Button</button>
+            <div class="section__contact">
+                <form class="section__contactForm" action="#" method="POST">
+                    <input class="input" type="text" id="name" name="name" value="" placeholder="Name">
+                    <input class="input" type="email" id="email" name="email" value="" placeholder="Email">
+                    <textarea class="input txtArea" id="comment" name="comment" value="" placeholder="Your commet..."></textarea>
+                    <button class="submitBtn" type="submit">Submit</button>
                 </form>
             </div>
         </section>

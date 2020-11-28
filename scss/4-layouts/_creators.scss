@@ -1,0 +1,114 @@
+.creators {
+    // @include section-container;
+
+    // &__body {
+    //     display: grid;
+    //     grid-template-columns: repeat(2, 1fr);
+    // }
+
+    // &__leftGroup {
+    //     @include flex-center;
+    // }
+
+    // &__pic {
+    //     width: 30vw;
+    // }
+
+    // &__header {
+    //     @include set-header-container($page-header: false);
+    // }
+
+    // &__title {
+    //     @include set-title($page-title: false);
+    //     @include medium-phone-screens {
+    //         font-size: 2.5rem;
+    //     }
+    //     @include small-phone-screens {
+    //         font-size: 2rem;
+    //     }
+    // }
+
+    // &__headerLine {
+    //     @include set-line;
+    // }
+
+    // &__txt {
+    //     padding: 0 4rem;
+    // }
+}
+
+// @include large-screens {
+//     .creators__body {
+//         display: grid;
+//         grid-template-columns: repeat(1, 1fr);
+//         grid-gap: 4rem;
+//         grid-template-areas: "first"
+//                             "second";
+
+//         .creators__rightGroup {
+//             grid-area: first;
+//         }
+
+//         .creators__leftGroup {
+//             grid-area: second;
+//         }
+
+//         .creators__header {
+//             margin-top: 0;
+//         }
+
+//         .creators__txt {
+//             text-align: center;
+//         }
+
+//         .creators__pic {
+//             width: 40vmax;
+//         }
+//     }
+// }
+
+
+.section__creators {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.section__creatorsLeftGroup {
+    @include flex-center;
+}
+
+.section__creatorsPic {
+    width: 30vw;
+}
+
+.section__creatorsTxt {
+    padding: 0 4rem;
+}
+
+@include large-screens {
+    .section__creators {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        grid-gap: 4rem;
+        grid-template-areas: "first"
+                            "second";
+
+        .section__creatorsRightGroup {
+            grid-area: first;
+        }
+
+        .section__creatorsLeftGroup {
+            grid-area: second;
+        }
+
+        .section__creatorsPic {
+            width: 40vmax;
+        }
+
+        .section__creatorsTxt {
+            text-align: center;
+        }
+    }
+}
+
+

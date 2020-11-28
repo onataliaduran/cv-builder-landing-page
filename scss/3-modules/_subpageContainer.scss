@@ -1,0 +1,11 @@
+.subpage {
+
+    &__header {
+        @include set-header-container($page-header: true);
+    }
+
+    &__title {
+        @include set-title($page-title: true);
+    }
+    
+}

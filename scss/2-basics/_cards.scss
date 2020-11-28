@@ -1,0 +1,131 @@
+.card { 
+    text-align: center;
+    padding: 3em 1em;
+
+    &--dark {
+        background: $primary-color;
+        color: #fff;
+    }
+
+    &--withShadow {
+        border-radius: 9px;
+        box-shadow: $lighter-shadow;
+    }
+
+    &__iconContainer {
+        position: relative;
+        @include flex-center;
+    }
+
+    &__icon {
+        position: absolute;
+        width: 3.5rem;
+    }
+
+    &__iconShape {
+        background: $primary-color;
+        width: 8.5rem;
+        height: 8.5rem;
+        box-shadow: 0 6px 20px 0 rgba(16, 39, 112,.3);
+        animation: border-transform 6s linear infinite;
+    }
+
+    @keyframes border-transform{
+        0%,100% { border-radius: 59% 41% 56% 44% / 60% 58% 42% 40%; } 
+      14% { border-radius: 59% 41% 56% 44% / 45% 40% 60% 55%; } 
+      28% { border-radius: 66% 34% 66% 34% / 52% 44% 56% 48%; } 
+      42% { border-radius: 53% 47% 57% 43% / 39% 40% 60% 61%; } 
+      56% { border-radius: 56% 44% 60% 40% / 54% 39% 61% 46%; } 
+      70% { border-radius: 55% 45% 37% 63% / 45% 57% 43% 55%; } 
+      84% { border-radius: 59% 41% 56% 44% / 45% 41% 59% 55%; } 
+    }
+
+    &__iconShape2 {
+        background: $primary-color;
+        width: 8.5rem;
+        height: 8.5rem;
+        box-shadow: 0 6px 20px 0 rgba(16, 39, 112,.3);
+        animation: border-transform2 6s linear infinite;
+    }
+
+    @keyframes border-transform2{
+        0%,100% { border-radius: 63% 37% 54% 46% / 55% 48% 52% 45%; } 
+      14% { border-radius: 40% 60% 54% 46% / 49% 60% 40% 51%; } 
+      28% { border-radius: 54% 46% 38% 62% / 49% 70% 30% 51%; } 
+      42% { border-radius: 61% 39% 55% 45% / 61% 38% 62% 39%; } 
+      56% { border-radius: 61% 39% 67% 33% / 70% 50% 50% 30%; } 
+      70% { border-radius: 50% 50% 34% 66% / 56% 68% 32% 44%; } 
+      84% { border-radius: 46% 54% 50% 50% / 35% 61% 39% 65%; } 
+    }
+
+    &__iconShape3 {
+        background: $primary-color;
+        width: 8.5rem;
+        height: 8.5rem;
+        box-shadow: 0 6px 20px 0 rgba(16, 39, 112,.3);
+        animation: border-transform3 6s linear infinite;
+    }
+
+    @keyframes border-transform3{
+        0%,100% { border-radius: 58% 42% 61% 39% / 41% 33% 67% 59%; } 
+      14% { border-radius: 58% 42% 46% 54% / 61% 44% 56% 39%; } 
+      28% { border-radius: 58% 42% 46% 54% / 42% 34% 66% 58%; } 
+      42% { border-radius: 58% 42% 34% 66% / 49% 50% 50% 51%; } 
+      56% { border-radius: 58% 42% 41% 59% / 40% 45% 55% 60%; } 
+      70% { border-radius: 64% 36% 41% 59% / 59% 51% 49% 41%; } 
+      84% { border-radius: 46% 54% 50% 50% / 35% 61% 39% 65%; } 
+    }
+
+    &__title {
+        font-weight: map-get($font-weights, bold);
+        font-size: 1.5em;
+        margin: 1em 0;
+    }
+
+    &__body {
+        margin: 1rem 0;
+    }
+
+    &__iconBox {
+        box-shadow: $darker-shadow;
+        width: 5rem;
+        height: 5rem;
+        border-radius: 5px;
+        margin: .5rem auto;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    &__planIcon {
+        width: 3rem;
+    }
+
+    &__price {
+        font-size: 3rem;
+        font-weight: 500;
+    }
+
+    &__list {
+        list-style-type: none;
+        display: inline-block;
+        margin-bottom: .5rem;
+    }
+
+    &__listItem {
+        text-align: left;
+
+        i {
+            color: $primary-color;
+        }
+    }   
+    
+    &__listItem--light {
+        text-align: left;
+
+        i {
+            color: #fff;
+        }
+    }
+}
+
