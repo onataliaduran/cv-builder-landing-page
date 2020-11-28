@@ -1,39 +1,3 @@
-.steps {
-    // @include section-container;
-
-    // &__header {
-    //     @include set-header-container($page-header: false);
-    // }
-
-    // &__title {
-    //     @include set-title($page-title: false);
-    //     @include medium-phone-screens {
-    //         font-size: 2.5rem;
-    //     }
-    //     @include small-phone-screens {
-    //         font-size: 2rem;
-    //     }
-    // }
-
-    // &__headerLine {
-    //     @include set-line;
-    // }
-
-    // &__body {
-    //     display: grid;
-    //     grid-template-columns: repeat(3, 1fr);
-    //     grid-gap: 4em;
-
-    //     @include large-screens {
-    //         display: grid;
-    //         grid-template-columns: repeat(1, 1fr);
-    //         grid-gap: 0;
-    //         width: 60vw;
-    //         margin: 0 auto;
-    //     }
-    // } 
-}
-
 .section__steps {
     display: grid;
     grid-template-columns: repeat(3, 1fr);

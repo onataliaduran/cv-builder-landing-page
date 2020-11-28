@@ -82,6 +82,11 @@
         margin: 1em 0;
     }
 
+    &__title {
+        font-weight: map-get($font-weights, bold);
+        font-size: 1.5em;
+    }
+
     &__body {
         margin: 1rem 0;
     }
@@ -98,7 +103,7 @@
     }
 
     &__planIcon {
-        width: 3rem;
+        width: 2.5rem;
     }
 
     &__price {
@@ -118,6 +123,10 @@
         i {
             color: $primary-color;
         }
+
+        @include medium-phone-screens {
+            font-size: .8rem;
+        }
     }   
     
     &__listItem--light {
@@ -125,6 +134,10 @@
 
         i {
             color: #fff;
+        }
+
+        @include medium-phone-screens {
+            font-size: .8rem;
         }
     }
 }

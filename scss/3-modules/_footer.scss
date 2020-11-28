@@ -1,24 +1,63 @@
 .footer {
+    background: #f1f3f6;
     display: flex;
     justify-content: space-between;
     align-items: center;
     font-size: 1rem;
-    margin: 2em 3em;
+    padding: 1em 3em;
+    margin-top: 2rem;
 }
 
 .footer__txt {
-    color: rgb(145, 145, 145);
+    color: #b6bbc5;
     font-weight: map-get($font-weights, semi-bold);
+
+    @include medium-phone-screens {
+        font-size: .8rem;
+    }
+
+    @include small-phone-screens {
+        font-size: .6rem;
+    }
 }
 
 .footer__links {
     display: flex;
     justify-content: space-between;
-    width: 6rem;
+    width: 8rem;
     list-style-type: none;
+
+    @include small-phone-screens {
+        width: 5rem;
+    }
 }
 
 .footer__rrssIcon {
-    width: 25px;
-    height: 25px;
+    background: #f1f3f6;
+    color: #b6bbc5;
+    display: flex;
+    font-size: 1rem;
+    width: 2rem;
+    height: 2rem;
+    text-decoration: none;
+    border-radius: 9px;
+    box-shadow: -6px -6px 16px #fff,
+                6px 6px 16px #d1cdc7;
+
+                @include small-phone-screens {
+                    font-size: .7rem;
+                    width: 1.5rem;
+                    height: 1.5rem;
+                    border-radius: 5px;
+                }
+    
+    &:hover {
+        box-shadow: inset -6px -6px 16px #fff,
+                    inset 6px 6px 16px #d1cdc7
+    }
+
+    i {
+        margin: auto;
+    }
 }
+

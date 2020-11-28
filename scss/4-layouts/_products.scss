@@ -1,28 +1,3 @@
-.products {
-    // &__header {
-    //     @include set-header-container($page-header: true);
-    // }
-
-    // &__title {
-    //     @include set-title($page-title: true);
-    // }
-
-    // &__body {
-    //     display: grid;
-    //     grid-template-columns: repeat(3, 1fr);
-    //     grid-gap: 2rem;
-    //     padding: 1.5em 5em; 
-
-    //     @include large-screens {
-    //         display: grid;
-    //         grid-template-columns: repeat(1, 1fr);
-    //         grid-gap: 2rem;
-    //         padding: 1.5em 5em; 
-    //     }
-
-    // }
-}
-
 .subpage__products {
     display: grid;
     grid-template-columns: repeat(3, 1fr);

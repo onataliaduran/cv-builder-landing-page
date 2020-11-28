@@ -51,6 +51,13 @@
     margin-top: 15px;
 }
 
+@mixin extra-large-screens {
+    @media (max-width: 1120px) {
+        @content;
+    }
+}
+
+
 @mixin large-screens {
     @media (max-width: 868px) {
         @content;
@@ -65,6 +72,12 @@
 
 @mixin small-phone-screens {
     @media (max-width: 400px) {
+        @content;
+    }
+}
+
+@mixin extra-small-phone-screens {
+    @media (max-width: 360px) {
         @content;
     }
 }

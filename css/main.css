@@ -102,6 +102,9 @@ body {
     font-weight: 700;
     font-size: 1.5em;
     margin: 1em 0; }
+  .card__title {
+    font-weight: 700;
+    font-size: 1.5em; }
   .card__body {
     margin: 1rem 0; }
   .card__iconBox {
@@ -114,7 +117,7 @@ body {
     justify-content: center;
     align-items: center; }
   .card__planIcon {
-    width: 3rem; }
+    width: 2.5rem; }
   .card__price {
     font-size: 3rem;
     font-weight: 500; }
@@ -126,10 +129,16 @@ body {
     text-align: left; }
     .card__listItem i {
       color: #39065a; }
+    @media (max-width: 570px) {
+      .card__listItem {
+        font-size: .8rem; } }
   .card__listItem--light {
     text-align: left; }
     .card__listItem--light i {
       color: #fff; }
+    @media (max-width: 570px) {
+      .card__listItem--light {
+        font-size: .8rem; } }
 
 .accordion {
   background-color: #fff;
@@ -169,6 +178,8 @@ body {
   border-radius: 6px;
   outline: none;
   cursor: pointer; }
+  .button:hover, .hero__button:hover, .card__button:hover, .submitBtn:hover {
+    transform: scale(1.1); }
 
 .hero__button {
   font-size: 1em;
@@ -176,8 +187,16 @@ body {
   margin: 1em 0;
   transition-duration: 500ms;
   transition-property: transform; }
-  .hero__button:hover {
-    transform: scale(1.1); }
+  @media (max-width: 1120px) {
+    .hero__button {
+      font-size: .9em;
+      padding: 1.2em 1.5em; } }
+  @media (max-width: 570px) {
+    .hero__button {
+      width: 70%; } }
+  @media (max-width: 400px) {
+    .hero__button {
+      width: 90%; } }
 
 .card__button {
   width: 70%; }
@@ -192,22 +211,11 @@ body {
   outline: none;
   cursor: pointer;
   width: 70%; }
-
-@media screen and (max-width: 1120px) {
-  .hero__button {
-    font-size: .9em;
-    padding: 1.2em 1.5em; } }
-
-@media screen and (max-width: 570px) {
-  .hero__button {
-    width: 70%; } }
-
-@media screen and (max-width: 400px) {
-  .hero__button {
-    width: 90%; } }
+  .card__button--light:hover {
+    transform: scale(1.1); }
 
 .input {
-  background-color: #f7f7f7;
+  background-color: #f1f2f6;
   font-size: 14px;
   padding: 10px;
   border-radius: 3px;
@@ -413,25 +421,53 @@ body {
   margin: .2em 0; }
 
 .footer {
+  background: #f1f3f6;
   display: flex;
   justify-content: space-between;
   align-items: center;
   font-size: 1rem;
-  margin: 2em 3em; }
+  padding: 1em 3em;
+  margin-top: 2rem; }
 
 .footer__txt {
-  color: #919191;
+  color: #b6bbc5;
   font-weight: 600; }
+  @media (max-width: 570px) {
+    .footer__txt {
+      font-size: .8rem; } }
+  @media (max-width: 400px) {
+    .footer__txt {
+      font-size: .6rem; } }
 
 .footer__links {
   display: flex;
   justify-content: space-between;
-  width: 6rem;
+  width: 8rem;
   list-style-type: none; }
+  @media (max-width: 400px) {
+    .footer__links {
+      width: 5rem; } }
 
 .footer__rrssIcon {
-  width: 25px;
-  height: 25px; }
+  background: #f1f3f6;
+  color: #b6bbc5;
+  display: flex;
+  font-size: 1rem;
+  width: 2rem;
+  height: 2rem;
+  text-decoration: none;
+  border-radius: 9px;
+  box-shadow: -6px -6px 16px #fff, 6px 6px 16px #d1cdc7; }
+  @media (max-width: 400px) {
+    .footer__rrssIcon {
+      font-size: .7rem;
+      width: 1.5rem;
+      height: 1.5rem;
+      border-radius: 5px; } }
+  .footer__rrssIcon:hover {
+    box-shadow: inset -6px -6px 16px #fff, inset 6px 6px 16px #d1cdc7; }
+  .footer__rrssIcon i {
+    margin: auto; }
 
 .hero {
   display: grid;
@@ -758,3 +794,6 @@ body {
   .signUpTxt span {
     color: #9a0f98;
     text-decoration: underline; }
+  @media (max-width: 400px) {
+    .signUpTxt {
+      font-size: .8rem; } }

@@ -7,6 +7,10 @@
     border-radius: 6px;
     outline: none;
     cursor: pointer;
+
+    &:hover {
+        transform: scale(1.1);
+    }
 } 
 
 .hero__button {
@@ -17,8 +21,17 @@
     transition-duration: 500ms;
     transition-property: transform;
 
-    &:hover {
-        transform: scale(1.1);
+    @include extra-large-screens {
+        font-size: .9em;
+        padding: 1.2em 1.5em;
+    }
+    
+    @include medium-phone-screens {
+        width: 70%;
+    }
+    
+    @include small-phone-screens {
+        width: 90%;
     }
 }
 
@@ -37,27 +50,12 @@
     outline: none;
     cursor: pointer;
     width: 70%;
+
+    &:hover {
+        transform: scale(1.1);
+    }
 }
 
 .submitBtn {
     @extend .button;
-}
-
-@media screen and (max-width: 1120px) {
-    .hero__button {
-        font-size: .9em;
-        padding: 1.2em 1.5em;
-    }
-}
-
-@media screen and (max-width: 570px) {
-    .hero__button {
-        width: 70%;
-    }
-}
-
-@media screen and (max-width: 400px) {
-    .hero__button {
-        width: 90%;
-    }
 }

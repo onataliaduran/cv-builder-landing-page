@@ -23,4 +23,8 @@
         text-decoration: underline;
     }
 
+    @include small-phone-screens {
+        font-size: .8rem;
+    }
+
 }
