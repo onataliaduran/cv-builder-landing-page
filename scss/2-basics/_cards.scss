@@ -17,9 +17,25 @@
         @include flex-center;
     }
 
+    &__iconAttribution {
+        display: none;
+        position: absolute;
+        z-index: 2;
+        top: -69px;
+        background-color: #000;
+        color: #fff;
+        width: 17rem;
+        padding: .5rem;
+        border-radius: 6px;
+    }
+
     &__icon {
         position: absolute;
         width: 3.5rem;
+
+        &:hover ~ .card__iconAttribution {
+            display: block;
+        }
     }
 
     &__iconShape {
@@ -92,6 +108,7 @@
     }
 
     &__iconBox {
+        position: relative;
         box-shadow: $darker-shadow;
         width: 5rem;
         height: 5rem;
@@ -104,6 +121,10 @@
 
     &__planIcon {
         width: 2.5rem;
+
+        &:hover ~ .card__iconAttribution {
+            display: block;
+        }
     }
 
     &__price {

@@ -57,20 +57,43 @@
     }
 
     &__cvHeaderPic {
-        background-color: $medium-gray; 
-        border-radius: 50%;
         width: 4em;
         height: 4em;
     }
 
-    &__cvHeaderLine {
+    &__cvHeaderLine1 {
         background-color: $medium-gray;
         width: 9em;
         height: .6em;
         border-radius: 10px;
         margin: .4em;
-        animation-name: line;
+        animation-name: line1;
         animation-duration: 1s;
+    }
+
+    &__cvHeaderLine2 {
+        background-color: $medium-gray;
+        width: 8em;
+        height: .6em;
+        border-radius: 10px;
+        margin: .4em;
+        animation-name: line2;
+        animation-duration: 1s;
+    }
+
+    &__cvBodyDashedBox {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        align-items: center;
+        height: 20em;
+    }
+
+    &__cvBodyDashedItem {
+        width: 17em;
+        height: 6.5em;
+        border: 1px dashed $medium-gray;
+        border-radius: 10px;
     }
 
     &__cvContent1 {
@@ -155,12 +178,21 @@
     }
 }
 
-@keyframes line {
+@keyframes line1 {
     0% {
         width: 0px;
     }
     100% {
         width: 9em;
+    }
+}
+
+@keyframes line2 {
+    0% {
+        width: 0px;
+    }
+    100% {
+        width: 8em;
     }
 }
 
